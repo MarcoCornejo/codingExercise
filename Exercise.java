@@ -52,7 +52,7 @@ public class Exercise {
                 System.out.println("Cost: $" + temp.get("costToComplete"));
                 System.out.println("#Students: " + temp.get("numStudents"));
                 for (Map.Entry<String, Double> entry : averages.entrySet()) {
-                    entry.setValue(entry.getValue() + proposal.getJSONObject(i).getDouble(entry.getKey()));
+                    entry.setValue(entry.getValue() + temp.getDouble(entry.getKey()));
                 }
             }
             System.out.println("======{ Averages }======");
